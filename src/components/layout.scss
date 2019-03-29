@@ -1,0 +1,12 @@
+header {
+    * { padding: 0; margin: 0; }
+    max-width: 800px;
+    
+    .brand {
+        font-size: 1.3em;
+        small {
+            position: relative;
+            top: -10px; left: 3px;
+        }
+    }
+}

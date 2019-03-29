@@ -1,0 +1,156 @@
+.audio-player {
+    --audio-bg: #444;
+    --audio-slider-color: coral;
+    --audio-slider-bg: white;
+
+    background: var(--audio-bg);
+    height: 50px;
+    box-shadow: 0 0 10px 0 #000a;
+    display: grid;
+    grid-template-rows: 7px auto;
+
+    .timeline {
+        background: var(--audio-slider-bg);
+        cursor: pointer;
+        .progress-bar {
+            height: 100%;
+            width: 35%;
+            background: var(--audio-slider-color);
+            transition: .25s;
+        }
+    }
+    
+    .controls {
+        display: grid;
+        grid-template-columns: 40px auto 40px;
+        align-items: center;
+        justify-items: center;
+        padding: 0 10px;
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        font-size: .85em;
+
+        color: white;
+        .duration {
+            color: #fff9;
+        }
+    }
+
+    .sound-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        position: relative;
+        .volume {
+            cursor: pointer;
+            position: absolute;
+            right: 35px;
+            transition: .25s;
+            height: 15px;
+            width: 0;
+            overflow: hidden;
+            .volume-slider {
+                background: var(--audio-slider-color);
+                height: 100%;
+                width: 24%;
+            }
+        }
+        
+        .sound-icon-container {
+            cursor: pointer;
+            width: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            .volume {
+                width: 100px;
+                background: var(--audio-slider-bg);
+            }
+        }
+    }
+
+    // css button stylings
+    .button {
+        cursor: pointer;
+
+        &.play {
+            border: 7px solid #0000;
+            border-left: 12px solid white;
+            position: relative;
+            right: -4px;
+        }
+        &.pause {
+            height: 13px;
+            width: 11px;
+            position: relative;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 3px;
+                top: 0; bottom: 0;
+                background: white;
+            }
+            &:before {
+                left: 0;
+            }
+            &:after {
+                right: 0;
+            }
+        }
+        &.sound {
+            transform: scale(.75);
+            border: 6px solid transparent;
+            border-left: none;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-right-color: white;
+            padding: 6px 3px;
+            box-shadow: inset 4px 0 white;
+        }
+        &.sound-on {
+            position: relative;
+            left: -4px;
+            &:after {
+                content: '';
+                border: 7px double transparent;
+                border-radius: 50%;
+                border-right-color: white;
+                position: absolute;
+                right: -18px; top: -6px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        &.sound-off {
+            position: relative;
+            left: -4px;
+            &:before {
+                content: '';
+                position: absolute;
+                right: -15px; top: 1px;
+                width: 2px; height: 9px;
+                transform: rotate(45deg);
+                background: white;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -15px;  top: 1px;
+                width: 2px; height: 9px;
+                transform: rotate(-45deg);
+                background: white;
+            }
+        }
+    }
+}
