@@ -11,7 +11,7 @@ const NotFoundPage = () => (
     <p>
       Either you typed the URL incorrectly, or this is an in-site bug.
       <br/>
-      If it's the latter, shoot me an email at contact@emnudge.com and I'll fix it ASAP.
+      If it's the latter, shoot me an email at <a href="mailto:contact@emnudge.com">contact@emnudge.com</a> and I'll fix it ASAP.
     </p>
   </Layout>
 )

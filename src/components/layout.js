@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
         ]}/>
         <div className="main-container">
           <main>{children}</main>
-          <footer style={{ position: 'fixed', bottom: 20, left: 20, color: 'black' }}>
+          <footer style={{ position: 'fixed', bottom: 20, left: 20, color: '#000a' }}>
             © {2019 === new Date().getFullYear() ? '2019' : `2019 - ${new Date().getFullYear()}`}, Built by EmNudge
           </footer>
         </div>

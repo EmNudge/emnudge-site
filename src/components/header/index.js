@@ -13,10 +13,12 @@ const Header = props => (
         </Link>
       </div>
       <nav>
-        {props.pages.map(page => 
-          <span key={page.route}>
-            <Link to={page.route}>{page.name}</Link>
-          </span>
+        {props.pages.map((page, index) => 
+          <>
+            <span key={page.route}>
+              <Link to={page.route}>{page.name}</Link>
+            </span> {index !== props.pages.length - 1 ? '/' : ''}
+          </>
         )}
       </nav>
     </div>
