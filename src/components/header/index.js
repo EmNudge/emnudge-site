@@ -3,11 +3,22 @@ import PropTypes from "prop-types"
 import React from "react"
 import "./index.scss"
 
-const Header = () => (
+const Header = props => (
   <header>
-    <div className="brand">
-      <h1>EmNudge</h1>
-      <small>Voice Over Artist</small>
+    <div className="content">
+      <div className="brand">
+        <Link to="/">
+          <h1>EmNudge</h1>
+          <small>Voice Over Artist</small>
+        </Link>
+      </div>
+      <nav>
+        {props.pages.map(page => 
+          <span key={page.route}>
+            <Link to={page.route}>{page.name}</Link>
+          </span>
+        )}
+      </nav>
     </div>
   </header>
 )

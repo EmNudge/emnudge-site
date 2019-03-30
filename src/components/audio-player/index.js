@@ -7,7 +7,7 @@ class AudioPlayer extends React.Component {
         super(props)
 
         this.state = {
-            updateTimeInterval: setInterval(() => this.updateTime(), 1000),
+            updateTimeInterval: null,
             audioIsPlaying: false,
             audioDuration: 0,
             audioCurrentTime: 0,
@@ -58,11 +58,15 @@ class AudioPlayer extends React.Component {
 
     playAudio = () => {
         this.audio.play()
-        this.setState({ audioIsPlaying: true })
+        this.setState({ 
+            audioIsPlaying: true, 
+            updateTimeInterval: setInterval(this.updateTime, 100) 
+        })
     }
     pauseAudio = () => {
         this.audio.pause()
         this.setState({ audioIsPlaying: false })
+        clearInterval(this.state.updateTimeInterval)
     }
 
     getTimeCode = num => {
