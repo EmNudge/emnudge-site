@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `EmNudge - Voice Artist`,
+    description: `EmNudge is an accredited voice over artist and voice actor with years of experience in the industry.`,
     author: `@gatsbyjs`,
   },
   plugins: [

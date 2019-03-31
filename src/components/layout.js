@@ -1,13 +1,6 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header/"
 import "./globals.scss"
@@ -35,7 +28,7 @@ const Layout = ({ children }) => (
         <div className="main-container">
           <main>{children}</main>
           <footer style={{ position: 'fixed', bottom: 20, left: 20, color: '#000a' }}>
-            © {2019 === new Date().getFullYear() ? '2019' : `2019 - ${new Date().getFullYear()}`}, Built by EmNudge
+            © {2019 === new Date().getFullYear() ? '2019' : `2019 - ${new Date().getFullYear()}`}, <Link to="/website">Built by EmNudge </Link>
           </footer>
         </div>
       </>
