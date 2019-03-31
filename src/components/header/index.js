@@ -17,7 +17,7 @@ const Header = props => (
           <React.Fragment key={page.route}>
             <span>
               <Link to={page.route}>{page.name}</Link>
-            </span> {index !== props.pages.length - 1 ? '/' : ''}
+            </span>
           </React.Fragment>
         )}
       </nav>
