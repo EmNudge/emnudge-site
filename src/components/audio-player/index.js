@@ -29,8 +29,8 @@ class AudioPlayer extends React.Component {
     }
 
     setTime = e => {
-        const offset = e.clientX - this.timelineRef.current.offsetLeft
-        const width = parseInt(window.getComputedStyle(this.timelineRef.current).width)
+        const { x, width } = this.timelineRef.current.getBoundingClientRect()
+        const offset = e.clientX - x
         const timeToSeek = parseInt(offset / width * this.audio.duration)
         this.audio.currentTime = timeToSeek
 

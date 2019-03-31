@@ -14,11 +14,11 @@ const Header = props => (
       </div>
       <nav>
         {props.pages.map((page, index) => 
-          <>
-            <span key={page.route}>
+          <React.Fragment key={page.route}>
+            <span>
               <Link to={page.route}>{page.name}</Link>
             </span> {index !== props.pages.length - 1 ? '/' : ''}
-          </>
+          </React.Fragment>
         )}
       </nav>
     </div>
