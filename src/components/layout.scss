@@ -6,4 +6,21 @@
     h1, a {
         color: var(--theme-color);
     }
+
+    main {
+        max-width: 600px;
+        position: relative;
+        top: 0;
+        animation: fade-fall-in .5s;
+    }
+    @keyframes fade-fall-in {
+        from {
+            top: -20px;
+            opacity: 0;
+        }
+        to {
+            top: 0px;
+            opacity: 1;
+        }
+    }
 }
