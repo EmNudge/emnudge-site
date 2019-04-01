@@ -27,6 +27,9 @@ class AudioPlayer extends React.Component {
             this.setState({ audioDuration: this.audio.duration, audioVolume: this.audio.volume })
         }, false)
     }
+    componentWillUnmount() {
+        this.pauseAudio()
+    }
 
     setTime = e => {
         const { x, width } = this.timelineRef.current.getBoundingClientRect()

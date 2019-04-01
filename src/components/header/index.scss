@@ -19,6 +19,8 @@ header {
 
         .brand {
             font-size: 1.3em;
+            display: inline-block;
+
             small {
                 position: relative;
                 top: -10px; left: 3px;
@@ -50,7 +52,7 @@ header {
                     &:after { bottom: 0; right: -5px; }
                     
                     &:hover {
-                        &:before, &:after { width: 100%;  height: 100%; opacity: 1; }
+                        &:before, &:after { width: 100%; height: 100%; opacity: 1; }
                         &:before {
                             border-top-color: var(--theme-color);
                             border-right-color: var(--theme-color);
@@ -76,9 +78,88 @@ header {
                     }
                     
                 }
+            }
+        }
+        .hamburger-container {
+            display: none;
 
-                
+            .hamburger {
+                position: relative;
+                margin-top: 10px;
+                &, &:before, &:after {
+                    width: 30px;
+                    height: 4px;
+                    border-radius: 4px;
+                    background: white;
+                }
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    transition: .25s;
+                }
+                &:before { top: -8px; }
+                &:after { bottom: -8px; }
 
+                transition: .5s;
+                &.close {
+                    background: #0000;
+                    &:after { transform: rotate(0deg); top: 0; }
+                    &:before { transform: rotate(-90deg); top: 0; }
+                    transform: rotate(320deg);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        padding-bottom: 0px;
+        .content { 
+            flex-direction: column;
+            margin-bottom: -20px;
+            .brand {
+                align-self: flex-start;
+            }
+
+            .hamburger-container {
+                display: inline-block;
+                align-self: flex-end;
+                margin-bottom: 30px;
+                cursor: pointer;
+                padding-bottom: 10px;
+                position: relative;
+                top: -60px;
+                z-index: 100;
+            }
+
+            nav {
+                flex-direction: column;
+                background: linear-gradient(to right, #000c, #000e);
+                position: fixed;
+                top: 0; bottom: 0; right: 0;
+                z-index: 99;
+                padding: 30px;
+                padding-top: 80px;
+                padding-left: 40px;
+                right: -200px;
+
+                &.open {
+                    animation: drag-in .5s forwards;
+                    @keyframes drag-in {
+                        from { right: -200px; }
+                        to { right: 0; }
+                    }
+                }
+                &.closed {
+                    right: -200px;
+
+                    animation: drag-out .5s;
+                    @keyframes drag-out {
+                        from { right: 0; }
+                        to { right: -200px; }
+                    }
+                }
             }
         }
     }
