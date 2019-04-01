@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,11 +6,17 @@ import SEO from "../components/seo"
 import Table from '../components/table'
 
 const Contact = () => {
+  const [screenWidth, setScreenWidth] = React.useState(800)
+
+  React.useEffect(() => {
+    setScreenWidth(window.innerWidth)
+  });
+
   return (
     <Layout>
       <SEO title="Contact" />
       <h1>How To Reach Me</h1>
-      {window.innerWidth > 750 
+      {screenWidth > 750 
         ? <Table 
             head={['Type', 'Link', 'Use Case']}
             rows={[
