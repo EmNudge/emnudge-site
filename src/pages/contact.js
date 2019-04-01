@@ -7,8 +7,6 @@ import SEO from "../components/seo"
 import Table from '../components/table'
 
 const Contact = () => {
-  console.log(document.documentElement.clientWidth)
-  console.log()
   return (
     <Layout>
       <SEO title="Contact" />
