@@ -1,0 +1,21 @@
+.tables-container {
+    overflow-y: scroll;
+    padding: 20px;
+    height: 600px;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .tables-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .tables-container {
+        height: 450px;
+    }
+}

@@ -3,49 +3,58 @@
     padding-top: 0;
     max-width: 1000px;
 
-    h1, a {
+    h1 {
         color: var(--theme-color);
     }
-
+    
     a {
-        padding: 7px;
-        margin: -7px;
+        color: white;
+        text-decoration: none;
+        transition: .25s;
+        cursor: pointer;
         
         position: relative;
-        &::before, &::after {
+        &:before, &:after {
             content: '';
             position: absolute;
-            width: 0; height: 0;
-            border: 2px solid transparent;
-            transition: .5s;
+            left: 0; right: 0; bottom: 0;
+            height: 1px;
+            background: white;
+            transition: .25s;
         }
-        &:before { top: 0; right: 0; }
-        &:after { bottom: 0; left: 0; }
-        
-        display: inline-block;
-        transition: .5s;
+        &:after {
+            background: var(--theme-color);
+            width: 0%;
+            margin: 0 auto;
+        }
+
         &:hover {
-            transform: scale(.8);
-            &:before, &:after { width: 100%; height: 100%; }
-            &:before {
-                border-top-color: var(--theme-color);
-                border-right-color: var(--theme-color);
-            }
-            &:after {
-                border-bottom-color: var(--theme-color);
-                border-left-color: var(--theme-color);
-            }
+            color: var(--theme-color);
+            
+            &:after { width: 100%; }
         }
     }
 
     main {
-        max-width: 600px;
+        max-width: 800px;
+        margin: 0 auto;
         position: relative;
         top: 0;
-        animation: fade-fall-in .5s;
+        animation: fade-grow-in .5s;
         padding: 0 50px;
-        padding-bottom: 200px;
     }
+
+    @keyframes fade-grow-in {
+        from {
+            opacity: 0;
+            transform: scale(.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
     @keyframes fade-fall-in {
         from {
             top: -20px;
@@ -61,6 +70,5 @@
 @media screen and (max-width: 650px) {
     .main-container main {
         padding: 0 20px;
-        padding-bottom: 200px;
     }
 }

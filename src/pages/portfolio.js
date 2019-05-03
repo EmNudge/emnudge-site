@@ -6,12 +6,14 @@ import SEO from "../components/seo"
 
 import Table from '../components/table'
 
+import './portfolio.scss';
+
 const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" />
     <h1>Past Roles</h1>
-    <div>
-      <h2 style={{ textAlign: 'center' }}>Games</h2>
+    <div className="tables-container">
+      <h2>Games</h2>
       <Table
         head={[
           'Game', 'Developer', 'Role'
@@ -32,7 +34,7 @@ const Portfolio = () => (
         ]} 
       />
       <br/>
-      <h2 style={{ textAlign: 'center' }}>Animations</h2>
+      <h2>Animations</h2>
       <Table
         head={[
           'Animation', 'Animator', 'Role'
@@ -48,7 +50,7 @@ const Portfolio = () => (
         ]} 
       />
       <br/>
-      <h2 style={{ textAlign: 'center' }}>Narration</h2>
+      <h2>Narration</h2>
       <Table
         head={[
           'Video', 'Company'

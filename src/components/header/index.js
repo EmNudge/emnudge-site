@@ -28,7 +28,7 @@ const Header = props => {
           {props.pages.map((page, index) => 
             <React.Fragment key={page.route}>
               <span>
-                <Link to={page.route}>{page.name}</Link>
+                <Link to={page.route} activeClassName="active">{page.name}</Link>
               </span>
             </React.Fragment>
           )}
