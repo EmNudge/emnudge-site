@@ -1,16 +1,10 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import HamburgerIcon from './hamburger-icon';
 import React, { useState } from "react"
 import "./index.scss"
 
-const Header = props => {
+const Header = ({ pages }) => {
   const [navIsOpen, setNavIsOpen] = useState(false)
-  const [clickedOnce, setclickedOnce] = useState(false)
-
-  function toggleNavVisibility() {
-    setclickedOnce(true)
-    setNavIsOpen(!navIsOpen)
-  }
 
   return (
     <header>
@@ -21,11 +15,14 @@ const Header = props => {
             <small>Voice Over Artist</small>
           </Link>
         </div>
-        <div className="hamburger-container" onClick={toggleNavVisibility}>
-          <div className={"hamburger " + (navIsOpen ? "close" : "")}></div>
-        </div>
-        <nav className={navIsOpen && clickedOnce ? 'open' : clickedOnce ? 'closed' : ''}>
-          {props.pages.map((page, index) => 
+
+        <HamburgerIcon 
+          onClick={() => setNavIsOpen(!navIsOpen)} 
+          isOpen={navIsOpen} 
+        />
+        
+        <nav className={navIsOpen ? 'open' : 'closed'}>
+          {pages.map(page => 
             <React.Fragment key={page.route}>
               <span>
                 <Link to={page.route} activeClassName="active">{page.name}</Link>
