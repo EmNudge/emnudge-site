@@ -78,7 +78,7 @@ function SEO({ description, lang, meta, keywords, title, styleTag }) {
         )
         .concat(meta)}
     >
-      {styleTag}
+      {styleTag || ''}
     </Helmet>
   )
 }
