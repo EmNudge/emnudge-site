@@ -17,22 +17,27 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
-        <Header pages={[
-          { name: 'About', route: '/' },
-          { name: 'Demos', route: '/demos' },
-          { name: 'Portfolio', route: '/portfolio' },
-          { name: 'Contact', route: '/contact' },
-        ]}/>
-        <div className="main-container">
-          <main>{children}</main>
+    render={data => {
+      const currentYear = new Date().getFullYear();
+      const copDate = 2019 + (2019 !== currentYear ? ` - ${currentYear}` : '');
+
+      return (
+        <React.Fragment>
+          <Header pages={[
+            { name: 'About', route: '/' },
+            { name: 'Demos', route: '/demos' },
+            { name: 'Portfolio', route: '/portfolio' },
+            { name: 'Contact', route: '/contact' },
+          ]}/>
+  
+          <main className="main-container">{children}</main>
+  
           <footer style={{ position: 'fixed', bottom: 20, left: 20 }}>
-            © {2019 === new Date().getFullYear() ? '2019' : `2019 - ${new Date().getFullYear()}`}, <Link to="/website">Built by EmNudge </Link>
+            © {copDate}, <Link to="/website">Built by EmNudge</Link>
           </footer>
-        </div>
-      </>
-    )}
+        </React.Fragment>
+      )
+    }}
   />
 )
 

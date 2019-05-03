@@ -12,7 +12,7 @@ const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" />
     <h1>Past Roles</h1>
-    <div className="tables-container">
+    <main className="tables-container">
       <h2>Games</h2>
       <Table
         head={[
@@ -60,7 +60,7 @@ const Portfolio = () => (
           ['Road To Valve', 'MechaFourth'],
         ]} 
       />
-    </div>
+    </main>
   </Layout>
 )
 

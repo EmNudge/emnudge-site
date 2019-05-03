@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Website" />
     <h1>You've Found A Secret Page!</h1>
-    <div>
+    <main>
       <p>In addition to being a voice actor, I am also a web developer. 
       <br/>As such, I have built this website myself.</p>
 
@@ -23,7 +23,7 @@ const IndexPage = () => (
       <p>If you want a more in depth explanation or some source code, send me an email at <a href="mailto:contact@emnudge.com">contact@emnudge.com</a>!</p>
 
       <br/> <br/> <br/>
-    </div>
+    </main>
   </Layout>
 )
 
