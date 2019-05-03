@@ -8,6 +8,8 @@
             cursor: pointer;
             th {
                 position: relative;
+                color: var(--theme-color);
+
                 &:after {
                     content: '';
                     position: absolute;

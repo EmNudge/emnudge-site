@@ -1,0 +1,19 @@
+main.contact-content {
+    > *:first-child {
+        display: block;
+    }
+    > *:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    main.contact-content {
+        > *:first-child {
+            display: none;
+        }
+        > *:last-child {
+            display: block;
+        }
+    }
+}

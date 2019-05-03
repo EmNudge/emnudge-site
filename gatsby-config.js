@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `EmNudge Portfolio`,
-        short_name: `starter`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
