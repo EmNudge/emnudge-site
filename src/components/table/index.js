@@ -27,14 +27,12 @@ const Table = props => {
         if (typeof item === "string") return item
         return item.text
     }
-    function getLinkOrText(item) {
-        if (typeof item === "string") return item
-        return <a href={item.link}>{item.text}</a>
-    }
     
     function getItem(item) {
         if (typeof item === "string") return item
+        
         if (item.link) return <a href={item.link}>{item.text}</a>;
+
         return <div style={{ width: 100 }}> 
             <i className={item.icon} style={{ paddingRight: 10 }}></i>
             {item.text}
