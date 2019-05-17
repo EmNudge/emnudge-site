@@ -1,98 +1,130 @@
-$transition-speed: .25s;
+$transition-speed: 0.25s;
 
 header {
-    * { padding: 0; margin: 0; }
-    padding: 10px 30px;
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  padding: 10px 30px;
 
+  color: white;
+
+  a {
+    text-decoration: none;
     color: white;
-    
-    a {
-        text-decoration: none;
-        color: white;
-    }
+  }
 
-    .content {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1000px;
-        margin: 0 auto;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
 
-        .brand {
-            font-size: 1.3em;
-            display: inline-block;
+    .brand {
+      font-size: 1.3em;
+      display: inline-block;
 
-            small {
-                position: relative;
-                top: -10px; left: 3px;
-                color: var(--theme-color);
-            }
+      small {
+        position: relative;
+        top: -10px;
+        left: 3px;
+        color: var(--theme-color);
+      }
+      a {
+        &:after {
+          height: 0;
         }
-        nav {
-            display: flex;
-            align-items: center;
-            font-size: 1.5em;
-            span {
-                padding: 10px;
-                a {
-                    transition: .25s;
-
-                    position: relative;
-                    &:before, &:after {
-                        content: '';
-                        position: absolute;
-                        height: 1px; width: 0%;
-                        background: var(--theme-color);
-                        transition: .25s;
-                    }
-                    &:before { top: 0; left: 0; }
-                    &:after { bottom: 0; right: 0; }
-
-                    &:hover {
-                        &:before, &:after {
-                            width: 100%;
-                        }
-                    }
-
-                    &.active {
-                        color: var(--theme-color);
-
-                        &:before, &:after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+        &:hover {
+          color: white;
         }
+      }
     }
+    nav {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      span {
+        padding: 10px;
+        a {
+          transition: 0.25s;
+
+          position: relative;
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 0%;
+            background: var(--theme-color);
+            transition: 0.25s;
+          }
+          &:before {
+            top: 0;
+            left: 0;
+          }
+          &:after {
+            bottom: 0;
+            right: 0;
+
+            // have to override layout.scss from changing this to centered
+            left: auto;
+            margin: 0;
+          }
+
+          &:hover {
+            &:before,
+            &:after {
+              width: 100%;
+            }
+          }
+
+          &.active {
+            color: var(--theme-color);
+
+            &:before,
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 750px) {
-    header {
-        padding-bottom: 0px;
-        margin-bottom: -40px;
-        .content { 
-            flex-direction: column;
-            margin-bottom: -20px;
+  header {
+    padding-bottom: 0px;
+    margin-bottom: -40px;
+    .content {
+      flex-direction: column;
+      margin-bottom: -20px;
 
-            .brand {
-                align-self: flex-start;
-            }
+      .brand {
+        align-self: flex-start;
+      }
 
-            nav {
-                flex-direction: column;
-                background: linear-gradient(to right, #000c, #000e);
-                position: fixed;
-                top: 0; bottom: 0; right: 0;
-                z-index: 99;
-                padding: 30px;
-                padding-top: 80px;
-                padding-left: 40px;
-                right: -200px;
+      nav {
+        flex-direction: column;
+        background: linear-gradient(to right, #000c, #000e);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+        padding: 30px;
+        padding-top: 80px;
+        padding-left: 40px;
+        right: -200px;
 
-                transition: .5s;
-                &.open { right: 0; }
-                &.closed { right: -200px; }
-            }
+        transition: 0.5s;
+        &.open {
+          right: 0;
         }
+        &.closed {
+          right: -200px;
+        }
+      }
     }
+  }
 }
