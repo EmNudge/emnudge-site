@@ -24,7 +24,7 @@ const Demos = () => (
           this website.
         </p>
       </div>
-      <div className="demo-reel" style={{ "margin-top": "30px" }}>
+      <div className="demo-reel" style={{ marginTop: 30 }}>
         <h3>Producer Tags Demo Reel</h3>
         <AudioPlayer name="Producer Tags Reel" volume={0.7} file={tags} />
         <p>
