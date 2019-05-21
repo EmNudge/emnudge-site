@@ -24,15 +24,6 @@ const Demos = () => (
           this website.
         </p>
       </div>
-      <div className="demo-reel" style={{ marginTop: 30 }}>
-        <h3>Producer Tags Demo Reel</h3>
-        <AudioPlayer name="Producer Tags Reel" volume={0.7} file={tags} />
-        <p>
-          I both voice and engineer producer tags for use in beats and songs.
-          For a personalized quote, shoot off an email to{" "}
-          <a href="mailto:contact@emnudge.com">Contact@EmNudge.com</a>.
-        </p>
-      </div>
     </main>
   </Layout>
 )
