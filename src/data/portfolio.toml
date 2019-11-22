@@ -1,0 +1,97 @@
+[[games]]
+title = 'Team Fortress 2'
+company = 'Valve'
+character = 'Davey Jones'
+
+[[games]]
+title = 'Concerns'
+company = 'MrMakistein'
+character = 'Detective'
+
+[[games]]
+title = 'My Time At Portia'
+company = 'Pathea Games'
+character = 'Django'
+
+[[games]]
+title = 'VR Flush'
+company = 'Brudingo Team'
+character = 'Businessman'
+
+[[games]]
+title = 'Eastshade'
+company = 'Eastshade Studios'
+character = 'Park Ranger, Ingov'
+
+[[games]]
+title = 'Reality Falls'
+company = 'Lewis Denby'
+character = 'Lukas'
+
+[[games]]
+title = 'Industria'
+company = 'Bleakmill'
+character = 'Walter Rebel'
+
+[[games]]
+title = 'Lilith Odyssey'
+company = 'Jun & Pate'
+character = 'Various Radio'
+
+[[games]]
+title = 'Switch & Ditch'
+company = 'Tempera Games'
+character = 'Fighters'
+
+[[games]]
+title = 'Phobos'
+company = 'TFuture'
+character = 'Computer'
+
+[[games]]
+title = 'Bunker Busters'
+company = 'Amusudan'
+character = 'Grunts'
+
+[[games]]
+title = 'Wallachia Reign of Dracula'
+company = 'Migami Games'
+character = 'Father'
+
+[[animations]]
+title = 'My Pizza Family Ep 1'
+animator = 'Lonnie Marts III'
+character = 'Nate, Pepperoni'
+
+[[animations]]
+title = 'The Ice Cream Mann'
+animator = 'Mittens'
+character = 'Heavy, Sniper, Demo'
+
+[[animations]]
+title = 'Black Dust'
+animator = 'Secrios'
+character = 'Spencer'
+
+[[animations]]
+title = 'A Baby Trouble'
+animator = 'HoovyTube'
+character = 'Heavy'
+
+[[animations]]
+title = 'The Scout who Never Gave Up'
+animator = 'HoovyTube'
+character = 'Heavy, Sniper'
+
+[[animations]]
+title = 'The Importance of Biology'
+animator = 'Mittens'
+character = 'Kermit'
+
+[[narrations]]
+title = 'Boreal Alyph November Update'
+company = 'Keep Away From Fire'
+
+[[narrations]]
+title = 'Road To Valve'
+company = 'MechaFourth'

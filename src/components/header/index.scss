@@ -31,12 +31,8 @@ header {
         color: var(--theme-color);
       }
       a {
-        &:after {
-          height: 0;
-        }
-        &:hover {
-          color: white;
-        }
+        text-decoration: none;
+        &:before { content: none; }
       }
     }
     nav {

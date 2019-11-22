@@ -1,74 +1,95 @@
-.main-container {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 700px;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
-  h1 {
-    color: var(--theme-color);
-  }
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	--theme-color: coral;
+	font-family: Roboto;
+	font-size: 18px;
+
+	margin: 0;
+	padding: 0;
+	color: white;
+
+	background: linear-gradient(to bottom right, #493151, #211f29);
+	background-attachment: fixed;
+}
+
+.main-container {
+	margin: 0 auto;
+	margin-top: 60px;
+	padding: 0 20px;
+	padding-bottom: 40px;
+	max-width: 700px;
+	line-height: 1.8em;
+
+	h1 {
+		color: var(--theme-color);
+		margin-bottom: 40px;
+	}
+	h2,
+	h3 {
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
 }
 
 main {
-  animation: fade-grow-in 0.5s;
+	animation: fade-grow-in 0.5s;
 }
 
 @keyframes fade-grow-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 @keyframes fade-fall-in {
-  from {
-    top: -20px;
-    opacity: 0;
-  }
-  to {
-    top: 0px;
-    opacity: 1;
-  }
+	from {
+		top: -20px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  transition: 0.25s;
-  cursor: pointer;
+a:not(.brand) {
+	color: white;
+	text-decoration: none;
+	transition: 0.25s;
+	cursor: pointer;
 
-  position: relative;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: white;
-    transition: 0.25s;
-  }
-  // &:after {
-  //     background: var(--theme-color);
-  //     width: 0%;
-  //     margin: 0 auto;
-  // }
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background: white;
+		transition: 0.25s;
+	}
 
-  &:hover {
-    color: var(--theme-color);
+	&:hover {
+		color: var(--theme-color);
 
-    &:after {
-      width: 100%;
-    }
-  }
+		&:after {
+			width: 100%;
+		}
+	}
 }
-
-// @media screen and (max-width: 750px) {
-//     .main-container {
-//         padding: 0 60px;
-//     }
-// }

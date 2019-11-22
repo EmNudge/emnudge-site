@@ -24,6 +24,7 @@ const Table = props => {
     }
 
     function getTextForItem(item) {
+        console.log(item)
         if (typeof item === "string") return item
         return item.text
     }

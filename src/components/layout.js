@@ -1,48 +1,33 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql, Link } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from "gatsby"
+import Header from './header/';
+import getCopyright from '../utils/getCopyright';
+import './layout.scss';
 
-import Header from "./header/"
-import "./globals.scss"
-import "./layout.scss"
+const Layout = ({ children }) => {
+  const copyright = getCopyright(2019);
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => {
-      const currentYear = new Date().getFullYear();
-      const copDate = 2019 + (2019 !== currentYear ? ` - ${currentYear}` : '');
-
-      return (
-        <React.Fragment>
-          <Header pages={[
-            { name: 'About', route: '/' },
-            { name: 'Demos', route: '/demos' },
-            { name: 'Portfolio', route: '/portfolio' },
-            { name: 'Contact', route: '/contact' },
-          ]}/>
-  
-          <main className="main-container">{children}</main>
-  
-          <footer style={{ position: 'fixed', bottom: 20, left: 20 }}>
-            © {copDate}, <Link to="/website">Built by EmNudge</Link>
-          </footer>
-        </React.Fragment>
-      )
-    }}
-  />
-)
+	return (
+		<React.Fragment>
+			<Header
+				pages={[
+					{ name: 'About', route: '/' },
+					{ name: 'Demos', route: '/demos' },
+					{ name: 'Portfolio', route: '/portfolio' },
+					{ name: 'Contact', route: '/contact' }
+				]}
+			/>
+      <main className="main-container">{children}</main>
+      <footer style={{ position: 'fixed', bottom: 20, left: 20 }}>
+        © {copyright}, <Link to="/website">Built by EmNudge</Link>
+      </footer>
+		</React.Fragment>
+	);
+};
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+	children: PropTypes.node.isRequired
+};
 
-export default Layout
+export default Layout;

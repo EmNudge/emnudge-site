@@ -9,12 +9,10 @@ const Header = ({ pages }) => {
   return (
     <header>
       <div className="content">
-        <div className="brand">
-          <Link to="/">
-            <h1>EmNudge</h1>
-            <small>Voice Over Artist</small>
-          </Link>
-        </div>
+        <Link className="brand" to="/">
+          <h1>EmNudge</h1>
+          <small>Voice Over Artist</small>
+        </Link>
 
         <HamburgerIcon 
           onClick={() => setNavIsOpen(!navIsOpen)} 

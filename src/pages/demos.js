@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 
 import AudioPlayer from "../components/audio-player"
 import demo from "../audio/demo_no_slate.mp3"
-import tags from "../audio/tags_demo.mp3"
 
 const Demos = () => (
   <Layout>
@@ -16,6 +15,7 @@ const Demos = () => (
       <div className="demo-reel">
         <h3>Character Demo Reel</h3>
         <AudioPlayer name="Character Demo Reel" volume={0.7} file={demo} />
+        <br/>
         <p>
           I have done voices that range from large, grungey monsters, to
           soft-spoken role models, as well as high-pitched, psychotic villians,
