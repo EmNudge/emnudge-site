@@ -5,7 +5,6 @@ import Table from '../components/table';
 import usePortfolio from '../hooks/usePortfolio';
 
 const Portfolio = () => {
-	console.log( usePortfolio())
 	const { games, narrations, animations } = usePortfolio();
 
 	const gameRows = games.map(({ title, company, character }) => [title, company, character]);
