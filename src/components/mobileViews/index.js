@@ -2,7 +2,6 @@ import React from "react"
 import "./index.scss"
 
 const MobileViews = ({ rows, isGame, isAnimation, isNarration }) => {
-  console.log(rows)
   const getRows = rows => {
     if (isGame) {
       return rows.map(({ character, company, title }) => {
