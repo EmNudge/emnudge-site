@@ -1,0 +1,12 @@
+.mobile-views {
+    .mobile-banner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin: 20px 0;
+        line-height: 1.5em;
+        h1 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+    }
+}
