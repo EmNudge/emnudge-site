@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Table from '../components/table';
-import MobileViews from '../components/MobileViews';
+import MobileViews from '../components/mobileViews';
 import usePortfolio from '../hooks/usePortfolio';
 import './portfolio.scss'
 
